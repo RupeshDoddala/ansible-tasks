@@ -1,0 +1,19 @@
+- name: install java
+  apt:
+    name: openjdk-8-jdk
+    state: installed
+
+- name: install maven
+  apt:
+    name: maven
+    state: installed
+
+- name: install apache
+  apt:
+    name: apache
+    state: installed
+
+- name: start apache service
+  service:
+    name: apache
+    state: started
